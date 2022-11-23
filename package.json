@@ -1,0 +1,29 @@
+{
+  "name": "agro-iot-api-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/serve.js",
+    "dev": "nodemon src/serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoRech1997/agro-iot-api-node.git"
+  },
+  "author": "Thiago Fernando Rech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThiagoRech1997/agro-iot-api-node/issues"
+  },
+  "homepage": "https://github.com/ThiagoRech1997/agro-iot-api-node#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
