@@ -17,5 +17,6 @@ module.exports = {
             data
         });
         console.log(device)
+        return res.status(200).send(device)
     }
 }
