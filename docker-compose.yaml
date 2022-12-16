@@ -2,16 +2,12 @@ version: "3"
 
 services:
   api:
-    image: node:latest
-    user: "node"
-    working_dir: /home/node/app
+    image: "node-api"
+    build: .
+    container_name: "API"
+    command: npm start
     restart: always
     ports:
-      - "3001:3001"
-    environment:
-      - NODE_ENV=production
+      - "3050:3050"
     volumes:
-      - ./:/home/node/app
-    expose:
-      - "3001"
-    command: "npm start"
+      - ./:/usr/api
