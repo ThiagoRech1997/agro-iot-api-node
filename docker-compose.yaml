@@ -15,16 +15,3 @@ services:
     expose:
       - "3001"
     command: "npm start"
-    links:
-      - mongodb
-    depends_on:
-      - mongodb
-
-  mongodb:
-    image: mongo:latest
-    container_name: "MongoDB"
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./data:/data/db
