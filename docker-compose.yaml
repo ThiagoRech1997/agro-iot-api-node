@@ -10,7 +10,7 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - ./api:/usr/api
+      - ./:/usr/api
     links:
       - mongodb
     depends_on:
