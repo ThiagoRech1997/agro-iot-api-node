@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-  name: {
+  value: {
     type: String,
     required: true
   },
@@ -15,12 +15,6 @@ const schema = new Schema({
     type: Date,
     default: Date.now
   },
-  measurements: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'measurements',
-    }
-  ],
 });
 
-module.exports = mongoose.model("devices", schema);
+module.exports = mongoose.model("measurements", schema);
