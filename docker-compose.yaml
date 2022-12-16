@@ -2,15 +2,19 @@ version: "3"
 
 services:
   api:
-    image: "node-api"
-    build: .
-    container_name: "API"
-    command: npm start
+    image: node:latest
+    user: "node"
+    working_dir: /home/node/app
     restart: always
     ports:
       - "3001:3001"
+    environment:
+      - NODE_ENV=production
     volumes:
-      - ./:/usr/api
+      - ./:/home/node/app
+    expose:
+      - "3001"
+    command: "npm start"
     links:
       - mongodb
     depends_on:
