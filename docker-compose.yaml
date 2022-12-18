@@ -9,4 +9,4 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - ./:/usr/api
+      - ./:/usr/app
