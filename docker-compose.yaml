@@ -5,9 +5,8 @@ services:
     image: "node-api"
     build: .
     container_name: "API"
-    command: npm start
     restart: always
     ports:
-      - "3050:3050"
+      - "3001:3001"
     volumes:
       - ./:/usr/api
