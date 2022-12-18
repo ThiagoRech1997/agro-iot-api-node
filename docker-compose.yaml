@@ -6,7 +6,3 @@ services:
     build: .
     container_name: "API"
     restart: always
-    ports:
-      - "3001:3001"
-    volumes:
-      - ./:/usr/app
