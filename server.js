@@ -3,7 +3,7 @@ const routes = require('./src/routes')
 const cors = require('cors')
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://172.16.0.4:27017/agro-iot", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/agro-iot", { useNewUrlParser: true });
 
 const app = express()
 
