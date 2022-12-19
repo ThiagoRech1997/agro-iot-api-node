@@ -1,8 +1,10 @@
 version: "3"
 
 services:
-  api:
-    image: "node-api"
+  app:
     build: .
-    container_name: "API"
-    restart: always
+    command: node ./server.js
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./:/user/app
