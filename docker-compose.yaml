@@ -4,6 +4,7 @@ services:
   app:
     build: .
     command: node ./server.js
+    restart: always
     ports:
       - "3001:3001"
     volumes:
