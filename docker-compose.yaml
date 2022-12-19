@@ -8,3 +8,16 @@ services:
       - "3001:3001"
     volumes:
       - ./:/user/app
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: "MongoDB"
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
